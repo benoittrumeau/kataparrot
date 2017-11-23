@@ -19,7 +19,7 @@ public class Parrot {
 		case EUROPEAN:
 			throw new RuntimeException("Should be unreachable");
 		case AFRICAN:
-			return Math.max(0, getBaseSpeed() - getLoadFactor() * numberOfCoconuts);
+			throw new RuntimeException("Should be unreachable");
 		case NORWEGIAN_BLUE:
 			return (isNailed) ? 0 : getBaseSpeed(voltage);
 		}
@@ -30,11 +30,11 @@ public class Parrot {
 		return Math.min(24.0, voltage * getBaseSpeed());
 	}
 
-	private double getLoadFactor() {
+	protected double getLoadFactor() {
 		return 9.0;
 	}
 
-	private double getBaseSpeed() {
+	protected double getBaseSpeed() {
 		return 12.0;
 	}
 
