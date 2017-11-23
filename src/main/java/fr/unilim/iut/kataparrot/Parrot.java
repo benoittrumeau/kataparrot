@@ -3,15 +3,17 @@ package fr.unilim.iut.kataparrot;
 public class Parrot {
 
 	private ParrotTypeEnum type;
-	protected static int numberOfCoconuts = 0;
 	protected static double voltage;
 	protected static boolean isNailed;
 
-	public Parrot(ParrotTypeEnum _type, int numberOfCoconuts, double voltage, boolean isNailed) {
+	public Parrot(ParrotTypeEnum _type, double voltage, boolean isNailed) {
 		this.type = _type;
-		this.numberOfCoconuts = numberOfCoconuts;
 		this.voltage = voltage;
 		this.isNailed = isNailed;
+	}
+
+	public Parrot(ParrotTypeEnum african, int numberOfCoconuts, double voltage2, boolean isNailed2) {
+		// TODO Auto-generated constructor stub
 	}
 
 	public double getSpeed() {
@@ -30,12 +32,7 @@ public class Parrot {
 		return Math.min(24.0, voltage * getBaseSpeed());
 	}
 
-	protected double getLoadFactor() {
-		return 9.0;
-	}
-
 	protected double getBaseSpeed() {
 		return 12.0;
 	}
-
 }
